@@ -28,7 +28,9 @@ class App extends Component {
     }
 
     eventHandle(event){
+        console.log("hello")
         const {name, value} = event.target
+        console.log([name])
         this.setState({
             [name]: value
         })
@@ -54,6 +56,12 @@ class App extends Component {
     }
 
     render(){
+        const memeOption = this.state.memeHolder.map(list => {
+            return(
+                    <option key={list.id} value={list.url}>{list.name}</option>
+                
+            )
+        })
         return(
             <div>
                 <form>
@@ -74,6 +82,12 @@ class App extends Component {
                     <button onClick={this.submitHandle} name="random">Random Meme</button>
                     <button onClick={this.submitHandle} name="next">Next Meme</button>
                     <button onClick={this.submitHandle} name="prev">Prevous Meme</button>
+                    <label>
+                    Pick your favorite meme:
+                    <select onChange={this.eventHandle} name="imgUrl">
+                        {memeOption}
+                    </select>
+                    </label>
                 </form>
                 <div>
                     <img src={this.state.imgUrl} alt="problem" />
