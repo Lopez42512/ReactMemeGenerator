@@ -8,7 +8,8 @@ class App extends Component {
             topText: "",
             bottomText: "",
             imgUrl: "https://i.imgflip.com/345v97.jpg",
-            memeHolder: []
+            memeHolder: [],
+            number: 0
         }
         this.eventHandle = this.eventHandle.bind(this)
         this.submitHandle = this.submitHandle.bind(this)
@@ -35,18 +36,27 @@ class App extends Component {
 
     submitHandle(event){
         event.preventDefault()
+        const eventName = event.target.name
+        
+        if (eventName === "next"){
+            this.setState({number: this.state.number + 1})
+        } else if (eventName === "prev") {
+            this.setState({number: this.state.number - 1})
+        }
+    
         const randNum = Math.floor(Math.random() * this.state.memeHolder.length)
         const randMeme = this.state.memeHolder[randNum].url
-        this.setState({
-            imgUrl: randMeme
-        })
+        
+        eventName === "random" ? this.setState({imgUrl: randMeme}) : this.setState({imgUrl: this.state.memeHolder[this.state.number].url }) 
+        console.log(this.state.number)
+        
 
     }
 
     render(){
         return(
             <div>
-                <form onSubmit={this.submitHandle}>
+                <form>
                     <input 
                         type="text"
                         placeholder="Top Text"
@@ -61,7 +71,9 @@ class App extends Component {
                         onChange={this.eventHandle}
                         name="bottomText"
                     />
-                    <button>Random Meme</button>
+                    <button onClick={this.submitHandle} name="random">Random Meme</button>
+                    <button onClick={this.submitHandle} name="next">Next Meme</button>
+                    <button onClick={this.submitHandle} name="prev">Prevous Meme</button>
                 </form>
                 <div>
                     <img src={this.state.imgUrl} alt="problem" />
