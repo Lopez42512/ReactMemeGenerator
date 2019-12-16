@@ -11,8 +11,6 @@ class MemeGenerator extends Component {
             memeHolder: [],
             number: 0
         }
-        this.eventHandle = this.eventHandle.bind(this)
-        this.submitHandle = this.submitHandle.bind(this)
     }
 
     componentDidMount(){
@@ -27,7 +25,7 @@ class MemeGenerator extends Component {
         })
     }
 
-    eventHandle(event){
+    eventHandle = (event) => {
         console.log("hello")
         const {name, value} = event.target
         console.log([name])
@@ -36,7 +34,7 @@ class MemeGenerator extends Component {
         })
     }
 
-    submitHandle(event){
+    submitHandle = (event) => {
         event.preventDefault()
         const eventName = event.target.name
         
