@@ -25,6 +25,8 @@ class MemeGenerator extends Component {
         })
     }
 
+    
+
     eventHandle = (event) => {
         console.log("hello")
         const {name, value} = event.target
@@ -47,7 +49,7 @@ class MemeGenerator extends Component {
         const randNum = Math.floor(Math.random() * this.state.memeHolder.length)
         const randMeme = this.state.memeHolder[randNum].url
         
-        eventName === "random" ? this.setState({imgUrl: randMeme}) : this.setState({imgUrl: this.state.memeHolder[this.state.number].url }) 
+        eventName === "random" ? this.setState({imgUrl: randMeme, topText: "", bottomText: ""}) : this.setState({imgUrl: this.state.memeHolder[this.state.number].url, topText: "", bottomText: "" }) 
         console.log(this.state.number)
         
 
