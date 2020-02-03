@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import Draggable from 'react-draggable';
 
 class MemeGenerator extends Component {
 
@@ -91,8 +92,12 @@ class MemeGenerator extends Component {
                 </form>
                 <div className="meme">
                     <img src={this.state.imgUrl} alt="problem" />
-                    <h2 className="top">{this.state.topText}</h2>
-                    <h2 className="bottom">{this.state.bottomText}</h2>
+                    <Draggable>
+                        <h2 className="top">{this.state.topText}</h2>
+                    </Draggable>
+                    <Draggable>
+                        <h2 className="bottom">{this.state.bottomText}</h2>
+                    </Draggable>
                 </div>   
             </div>
         )
