@@ -33,11 +33,11 @@ body {
 }
 
 .textcontainer > input {
-    width: 150px;
+    width: 15%;
 }
 
 .textcontainer > button {
-    width: 150px;
+    width: 15%;
     text-align: center;
     font-size: 100%;
     background-color: white
@@ -45,7 +45,7 @@ body {
 
 .textcontainer > label {
     /* position: relative; */
-    width: 150px;
+    width: 15%;
     /* background-color: rgb(173, 68, 68) */
 }
 
