@@ -29,30 +29,52 @@ body {
     display: flex;
     justify-content: space-evenly;
     height: 50px;
-    background-color: brown
+    /* background-color: brown */
 }
 
 .textcontainer > input {
-    width: 10%;
+    width: 150px;
 }
 
 .textcontainer > button {
-    width: 10%;
+    width: 150px;
     text-align: center;
     font-size: 100%;
     background-color: white
 }
 
 .textcontainer > label {
-    /* width: 20%; */
-    background-color: white
+    /* position: relative; */
+    width: 150px;
+    /* background-color: rgb(173, 68, 68) */
+}
+
+
+.select {
+    position: relative;
+    background-color: aqua;
+    text-align: center;
+    font-size: 84%;
+    top: 25%;
+    width:100%
 }
 
 .imgcontainer{
-    position: relative;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 500px;
-    background-color: blue
+}
+
+.imgcontainer > img {
+    position: relative;
+    height: 100%;
+    width: 500px
+}
+
+.imgcontainer > h2 {
+    position: absolute;
+    color: black
 }
 
 @media only screen and (max-width: 580px) {
@@ -65,5 +87,12 @@ body {
         height: 50%;
         left: 0%;
         top:25%
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .imgcontainer > img {
+        width:320px;
+        
     }
 }
