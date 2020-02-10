@@ -79,18 +79,31 @@ body {
 }
 
 .allMemeContainer {
-    /* display: flex;
-    justify-content: center; */
-    /* width: 100%; */
-    background-color: azure
+    /* display: flex; */
+    /* justify-content: center; */
+    width: 100%;
+    /* background-color: azure */
 }
 
 .allMeme{
-    width: 300px;
-    height: 300px
+    position: relative;
+    width: 25%;
+    height: 300px;
+    /* left:5%; */
+    /* padding-right: 100px */
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .allMeme {
+        height: 150px ;
+    }
 }
 
 @media only screen and (max-width: 580px) {
+    .allMeme {
+        height: 100px ;
+    }
     .header > p {
         text-align: end;
         /* font-size: 175% */
