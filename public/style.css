@@ -27,37 +27,66 @@ body {
 }
 
 .textcontainer {
-    display: flex;
-    justify-content: space-evenly;
-    height: 50px;
-    /* background-color: brown */
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: brown
 }
 
-.textcontainer > input {
-    width: 12.5%;
+.toprow {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    /* background-color: aqua; */
 }
 
-.textcontainer > button {
-    width: 12.5%;
+.bottomrow {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top:50%;
+    background-color: aqua;
+}
+
+.bottomrow > button {
+    width: 25%;
+    height: 75%;
     text-align: center;
     font-size: 100%;
     background-color: white
 }
 
-.textcontainer > label {
+.textInput {
     /* position: relative; */
-    width: 12.5%;
+    width: 25%;
+    height: 50%;
+    border: 0px 5px 0px 5px;
+    text-align: center;
+}
+
+.toprow > button {
+    width: 20%;
+    height: 50%;
+    text-align: center;
+    font-size: 10%;
+    background-color: white
+}
+
+.toprow > label {
+    /* position: relative; */
     /* background-color: rgb(173, 68, 68) */
+    text-align: center;
 }
 
 
 .select {
-    position: relative;
-    background-color: aqua;
+    /* position: relative; */
+    background-color: white;
     text-align: center;
-    font-size: 84%;
-    top: 25%;
-    width:100%
+    /* font-size: 84%; */
+    /* top: 25%; */
+    width:25%;
+    height: 50%
 }
 
 .imgcontainer{
@@ -113,6 +142,9 @@ body {
         height: 50%;
         left: 0%;
         top:25%
+    }
+    .bottomrow > button {
+        font-size: 50%;
     }
 }
 
