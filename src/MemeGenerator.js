@@ -94,14 +94,14 @@ class MemeGenerator extends Component {
             <div>
                 <div className="textcontainer">
                     <input 
-                        placeholder="Enter Text"
+                        placeholder="Text is Draggable"
                         type="text"
                         onChange={this.handleChange}
                         name="text1"
                         value={this.state.text1}
                     />
                     <input 
-                        placeholder="Enter Text"
+                        placeholder="Text is Draggable"
                         type="text"
                         onChange={this.handleChange}
                         name="text2"
