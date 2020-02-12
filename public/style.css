@@ -30,7 +30,7 @@ body {
     position: relative;
     height: 100px;
     width: 100%;
-    background-color: brown
+    /* background-color: brown */
 }
 
 .toprow {
@@ -45,7 +45,7 @@ body {
     width: 100%;
     height: 50%;
     top:50%;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .bottomrow > button {
@@ -152,5 +152,8 @@ body {
     .imgcontainer > img {
         width:320px;
         
+    }
+    .textInput{
+        width: 20%
     }
 }
